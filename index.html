@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Working session timer</title>
+</head>
+<body>
+  <div class="counter-wrapper">
+    <h1>Working Session Timer</h1>
+    <section class="focus-section">
+      <h2>Session</h2>
+      <p class="timer-display">25 minutes</p>
+      
+      <form>
+        <input 
+          name="session-input"
+          class="session-input"
+          type="number" 
+          value="25" 
+          min="1" 
+          max="720"
+        />
+
+        <button class="start-timer stop-timer">Start session</button>
+        <button class="reset-timer">Reset timer</button>
+      </form>
+      
+    </section>
+
+    <section class="daily-progress">
+      <h2>Daily progress</h2>
+
+      <div class="progress-wrapper">
+        <p class="previous-progress">Yesterday: 8 hours</p>
+        <p class="daily-objective">Daily objective: 8 hours</p>
+        <p class="days-streak">Days streak: 0 days</p>
+      </div>
+      <p class="completed">Completed: <span class="count">3 hours</span></p>
+      
+    </section>
+  </div>
+</body>
+</html>
