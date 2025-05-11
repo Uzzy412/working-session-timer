@@ -1,0 +1,20 @@
+.start-timer[data-started="false"] {
+  .stop-text {
+    display: none;
+  }
+
+  .start-text {
+    display: inline;
+  }
+}
+
+.start-timer[data-started="true"] {
+  .stop-text {
+    display: inline;
+  }
+
+  .start-text {
+    display: none;
+  }
+}
+

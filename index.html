@@ -4,29 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <title>Working session timer</title>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="counter-wrapper">
     <h1>Working Session Timer</h1>
+
     <section class="focus-section">
       <h2>Session</h2>
-      <p class="timer-display">25 minutes</p>
+      <p class="timer-display">25 min</p>
       
-      <form>
+      <form name="session-form" class="session-form">
         <input 
           name="session-input"
           class="session-input"
-          type="number" 
+          type="number"
           value="25" 
           min="1" 
           max="720"
         />
 
-        <button class="start-timer stop-timer">Start session</button>
-        <button class="reset-timer">Reset timer</button>
+        <button class="start-timer" data-started="false">
+          <span class="start-text material-icons">play_circle</span>
+          <span class="stop-text material-icons">pause_circle</span>
+        </button>
+        <button class="reset-timer material-icons">stop_circle</button>
       </form>
-      
     </section>
 
     <section class="daily-progress">
@@ -38,8 +44,8 @@
         <p class="days-streak">Days streak: 0 days</p>
       </div>
       <p class="completed">Completed: <span class="count">3 hours</span></p>
-      
     </section>
+    <audio class="completed-session-sound" src="sounds/complete.mp3"></audio>
   </div>
 </body>
 </html>
